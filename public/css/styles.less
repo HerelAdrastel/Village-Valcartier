@@ -1,0 +1,106 @@
+// Déclaration des variables
+@primary: #222831;
+@secondary: #393e46;
+@accent: #00adb5;
+@background: #eeeeee;
+@link: #007bff;
+
+@small: 576px;
+@medium: 768px;
+@large: 992px;
+@xlarge: 1200px;
+
+@content-width: 90%;
+@variation: 10%;
+
+// Declaration des mixins
+.responsive-column-count(@max-width; @columns) {
+  @media screen and (max-width: @max-width) {
+    & {
+      column-count: @columns;
+    }
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: @background;
+  margin: 0;
+}
+
+a {
+  color: @link;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+nav {
+  // Large screens
+  background-color: @primary;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+
+  a, span {
+    float: left;
+    display: block;
+    color: @background;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+  }
+
+  .title {
+    background-color: @accent;
+  }
+
+  a:hover {
+    background-color: @secondary;
+  }
+}
+
+.container {
+  line-height: 0;
+  width: @content-width;
+  margin: auto;
+  column-count: 5;
+  column-gap: 5px;
+
+  // Attention: toujours du plus grand au plus petit
+  // Mauvais fonctionnement des medias queries dans le cas contraire
+  .responsive-column-count(@xlarge, 4);
+  .responsive-column-count(@large, 3);
+  .responsive-column-count(@medium, 2);
+  .responsive-column-count(@small, 1);
+
+  // Cache les element pour les afficher avec une animation en jQuery
+  a {
+    display: none;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    padding-bottom: 5px;
+    transition: 0.5s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+footer {
+  height: 100px;
+  border-top: 1px solid darken(@background, @variation);
+  width: 90%;
+  margin: 20px auto 0 auto;
+  padding: 10px;
+
+  a {
+    margin-right: 20px;
+  }
+}
