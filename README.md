@@ -1,19 +1,19 @@
 # WWW2019
 
-## Outils de développement
-
-- Php 7
-- NodeJs (pour le développement en LESS)
-
 ## Installation des outils
-Vérifier que `php` et `npm` sont dans la variable PATH de l'OS
 
-Taper les commandes suivantes de dev
+- Installer NodeJS et PHP.
+- Installer Git (faculatif)
+- Verifier que npm et php sont bien installés et accessibles avec `npm -v` et PHP avec `php -v`.
+- Taper les commandes suivantes dans le répertoire courant pour installer les dépendances
 ```
-npm i -g yarn gulp
+npm i -g yarn gulp-cli
 yarn install
+php composer.phar install
 ```
 
-Pour lancer la surveillance des fichiers LESS, taper `gulp watch`.
+## Développement
+Taper `gulp serve`, un serveur local est lancé.
+Il a pour rôle de faire serveur PHP et de compiler les fichiers .less en .css
 
-Pour lancer le serveur PHP, taper `cd public && php -S 127.0.0.1:8000`.
+![Capture](misc/screenshot.png)
