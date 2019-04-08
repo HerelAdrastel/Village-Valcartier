@@ -1,19 +1,12 @@
 # WWW2019
+Photos de la sortie au Villages Valcartier
 
 ## Installation des outils
 
-- Installer NodeJS et PHP.
-- Installer Git (faculatif)
-- Verifier que npm et php sont bien installés et accessibles avec `npm -v` et PHP avec `php -v`.
-- Taper les commandes suivantes dans le répertoire courant pour installer les dépendances
-```
-npm i -g yarn gulp-cli
-yarn install
-php composer.phar install
-```
+Entrez sur le navigateur file:///[RACINE]/public_html/index.html
 
-## Développement
-Taper `gulp serve`, un serveur local est lancé.
-Il a pour rôle de faire serveur PHP et de compiler les fichiers .less en .css
+Les images sont stockées dans images/sortie. 
+
+**A chaque modifications de ce dossier, taper la commande `sh generate_html.sh`**
 
 ![Capture](misc/screenshot.png)
