@@ -1,1 +1,14 @@
-/.idea/
+.idea/
+
+.bash_history
+.bash_logout
+.bash_profile
+.bashrc
+.cache/
+.config/
+.lesshst
+.local/
+.ssh/
+.subversion/
+.viminfo
+tmp/
