@@ -22,4 +22,10 @@ done
 
 # Fin de l'html
 tail -n +$(($line_to_replace + 1)) $source >> $dest
+
+echo "Création de l'archive"
+cd public_html/images
+zip -r photos.zip sortie
+mv photos.zip ..
+
 echo "Terminé !"
