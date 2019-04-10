@@ -1,4 +1,4 @@
-// Déclaration des variables
+// D claration des variables
 @primary: #222831;
 @secondary: #393e46;
 @accent: #00adb5;
@@ -8,7 +8,6 @@
 @small: 576px;
 @medium: 768px;
 @large: 992px;
-@xlarge: 1200px;
 
 @content-width: 90%;
 @variation: 10%;
@@ -48,6 +47,7 @@ nav {
     float: left;
     display: block;
     color: @background;
+    background-color: @primary;
     text-align: center;
     padding: 14px 16px;
     font-size: 17px;
@@ -55,6 +55,7 @@ nav {
 
   .title {
     background-color: @accent;
+    float: none;
   }
 
   a:hover {
@@ -66,12 +67,11 @@ nav {
   line-height: 0;
   width: @content-width;
   margin: auto;
-  column-count: 5;
+  column-count: 4;
   column-gap: 5px;
 
   // Attention: toujours du plus grand au plus petit
   // Mauvais fonctionnement des medias queries dans le cas contraire
-  .responsive-column-count(@xlarge, 4);
   .responsive-column-count(@large, 3);
   .responsive-column-count(@medium, 2);
   .responsive-column-count(@small, 1);

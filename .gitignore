@@ -12,3 +12,5 @@
 .subversion/
 .viminfo
 tmp/
+
+/public_html/images/sortie/
